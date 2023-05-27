@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     });
 
     await doc.getInfo();
-    const sheet = doc.sheetsByIndex[0];
+    const sheet = doc.sheetsByTitle['Voting Results'];
     const rows = await sheet.getRows();
     const raw_data = rows[0]._rawData;
     const header_values = rows[0]._sheet.headerValues;
