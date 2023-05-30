@@ -5,7 +5,7 @@ const Page = () => {
 
   const handlePost = async () => {
     try {
-      const response = await fetch('/api/some-endpoint?name=Paul');
+      const response = await fetch('/api/some-endpoint?name=Henok');
       if (!response.ok) {
         throw new Error(response.statusText);
       }
