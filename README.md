@@ -13,7 +13,7 @@
 </p>
 
 
-![demo](https://github.com/hshiferaw/henoks.xyz/raw/master/public/static/images/demo.png)
+![demo](https://github.com/hshiferaw/nextjs-google-sheets-database/public/static/images/demo.png)
 
 <div align="center">
 
