@@ -5,6 +5,6 @@
 @layer base {
   html,
   body {
-    @apply antialiased bg-black;
+    @apply antialiased bg-neutral-900;
   }
 }

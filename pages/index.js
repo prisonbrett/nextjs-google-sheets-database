@@ -91,7 +91,7 @@ const Page = () => {
                 return (
                   <button
                     key={index}
-                    className="flex justify-center text-zinc-200 font-bold border border-zinc-800 text-xs sm:text-sm rounded-full w-full overflow-hidden transition-colors duration-300 hover:bg-primary/10 hover:border-primary/20 disabled:bg-black disabled:cursor-not-allowed disabled:text-zinc-700"
+                    className="flex justify-center text-zinc-200 font-bold border border-zinc-800 text-xs sm:text-sm rounded-full w-full overflow-hidden transition-colors duration-300 hover:bg-primary/10 hover:border-primary/20 disabled:bg-neutral-900 disabled:cursor-not-allowed disabled:text-zinc-700"
                     onClick={() => handleClick(id)}
                     disabled={isSubmitting || error}
                   >
@@ -126,7 +126,7 @@ const Page = () => {
             </Fragment>
           )}
         </div>
-        {hasVoted ? <p className="m-0 text-sm text-zinc-400">{`${results.total} votes`}</p> : null}
+        {hasVoted ? <p className="m-0 text-sm text-amber-200">{`${results.total} votes`}</p> : null}
         {error ? <p className="m-0 text-sm font-bold text-red-500">{error.message}</p> : null}
       </div>
     </section>
