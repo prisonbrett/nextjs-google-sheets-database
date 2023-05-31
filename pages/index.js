@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { animate, stagger } from 'motion';
-
-import TheNewStackLogo from '../components/the-new-stack-logo';
+import { RoughNotation } from 'react-rough-notation'
+import JavaScriptLogo from '../components/StackLogo';
 
 const config = [
   {
@@ -19,6 +19,10 @@ const config = [
   {
     name: 'Machine Learning',
     id: 'machine_learning'
+  },
+  {
+    name: 'Show me the poll',
+    id: 'show_me_the_poll'
   }
 ];
 
@@ -63,11 +67,21 @@ const Page = () => {
   return (
     <section className="border border-zinc-800 rounded-lg px-4 py-6 sm:p-8 max-w-3xl mx-auto">
       <div className="grid gap-4">
-        <TheNewStackLogo />
+        <JavaScriptLogo />
         <p className="m-0 text-zinc-200 text-sm sm:text-lg mb-2 sm:mb-4">
-          What type of content are you most interested in? <b>Vote below!</b>
+        Which tech stack{' '}
+          <RoughNotation
+                type="underline"
+                show={true}
+                color="#F97316"   // #FBCFE8
+                animationDelay={1500}
+                animationDuration={3000}
+                multiline={true}
+              >
+                ignites your coding passion and unleashes your inner digital wizardry?&nbsp;
+              </RoughNotation>
+              Cast your digital ballot right down there!
         </p>
-
         <div className="grid gap-4 sm:gap-6 mb-2 sm:mb-4">
           {!hasVoted ? (
             <Fragment>
