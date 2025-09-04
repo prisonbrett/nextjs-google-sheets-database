@@ -2,9 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base page */
 @layer base {
-  html,
-  body {
-    @apply antialiased bg-neutral-900;
+  html, body, #__next { height: 100%; }
+  body { @apply bg-zinc-50 text-zinc-900 antialiased; }
+}
+
+/* Scrollbar discrète (Webkit) */
+@layer utilities {
+  .scroll-slim::-webkit-scrollbar { height: 10px; width: 10px; }
+  .scroll-slim::-webkit-scrollbar-thumb { @apply bg-zinc-300 rounded-full; }
+  .scroll-slim::-webkit-scrollbar-track { @apply bg-transparent; }
+}
+
+/* Style commun d’input */
+@layer components {
+  .cell-input {
+    @apply h-9 w-full rounded-md border border-zinc-200 bg-white px-3 text-sm
+           shadow-[inset_0_1px_0_rgba(255,255,255,.4)]
+           focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400;
   }
+  .cell-ghost     { @apply h-9 w-full rounded-md bg-transparent text-sm px-3; }
+  .pill-header    { @apply inline-flex items-center gap-2 text-zinc-700; }
 }

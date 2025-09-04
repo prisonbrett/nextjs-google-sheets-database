@@ -1,11 +1,9 @@
-import '../styles/globals.css';
+import "/styles/globals.css";
 
-const App = ({ Component, pageProps }) => {
+export default function App({ Component, pageProps }) {
   return (
-    <main className="prose mx-auto max-w-7xl px-6 py-12">
+    <div className="min-h-screen">
       <Component {...pageProps} />
-    </main>
+    </div>
   );
-};
-
-export default App;
+}
